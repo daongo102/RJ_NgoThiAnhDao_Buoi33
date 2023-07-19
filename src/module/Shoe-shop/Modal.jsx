@@ -8,7 +8,7 @@ export default class Modal extends Component {
             <div>
                 <div
                     style={{
-                        background: "rgba(0,0,0,0.8)",
+                        background: "rgba(99,99,99,0.9)",
                         width: "calc(100vw)",
                         height: "calc(100vw)",
                         position: "fixed",
@@ -89,11 +89,17 @@ export default class Modal extends Component {
                                 style={{
                                     display: "flex",
                                     justifyContent: "space-around",
+                                    margin: "-40px",
                                 }}
                             >
                                 <button
                                     type="button"
-                                    className="btn btn-success"
+                                    className="btn"
+                                    style={{
+                                        background: "#35239b",
+                                        color: "white",
+                                        fontSize: 13,
+                                    }}
                                     onClick={onModal("")}
                                 >
                                     Close

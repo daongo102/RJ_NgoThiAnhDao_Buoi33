@@ -74,6 +74,10 @@ button:focus-visible {
 }
 
 .shoe button:first-of-type:hover a{
-    color: white;
+    color: white; 
+}
+
+.shoe button:first-of-type:hover{
+    background: #35239b;
 }
 

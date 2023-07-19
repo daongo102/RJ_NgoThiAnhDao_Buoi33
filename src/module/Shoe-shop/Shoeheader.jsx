@@ -8,8 +8,12 @@ export default class Shoeheader extends Component {
                 style={{ position: "sticky", top: 50, height: "100%" }}
             >
                 <button
-                    style={{ width: "100%", textAlign: "left" }}
-                    className="btn btn-outline-primary mb-2"
+                    style={{
+                        width: "100%",
+                        textAlign: "left",
+                        border: "1px solid #35239b",
+                    }}
+                    className="btn mb-2"
                 >
                     <a href="#">Home</a>
                 </button>
