@@ -1,8 +1,9 @@
-import Index from "./module/shoe";
+import ShoesStore from "./module/Shoe-shop/ShoesStore";
+
 function App() {
     return (
-        <>
-            <Index/>
+        <>   
+           <ShoesStore/>
         </>
     );
 }
