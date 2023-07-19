@@ -73,3 +73,7 @@ button:focus-visible {
     }
 }
 
+.shoe button:first-of-type:hover a{
+    color: white;
+}
+

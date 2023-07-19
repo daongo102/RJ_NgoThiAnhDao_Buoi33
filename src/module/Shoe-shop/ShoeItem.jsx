@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Modal from "./Modal";
 
 export default class ShoeItem extends Component {
     render() {
-        const { item, setStateModal } = this.props;
+        const { item, onModal } = this.props;
         return (
             <div className="card text-white">
                 <img
@@ -32,11 +31,9 @@ export default class ShoeItem extends Component {
                             Thêm giỏ hàng
                         </button>
                         <button
-                            onClick={setStateModal(item)}
+                            onClick={onModal(item)}
                             style={{ fontSize: 13 }}
-                            className="btn btn-primary mx-2"
-                            data-toggle="modal"
-                            data-target={`modal${item.id}`}
+                            className="btn btn-primary mx-2"                            
                         >
                             Xem chi tiết
                         </button>

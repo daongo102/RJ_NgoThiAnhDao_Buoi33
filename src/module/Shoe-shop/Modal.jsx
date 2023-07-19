@@ -2,45 +2,47 @@ import React, { Component } from "react";
 
 export default class Modal extends Component {
     render() {
-        const { content, setStateModal } = this.props;
-        console.log(content);
+        const { content, onModal } = this.props;
+
         return (
             <div>
-                {/* <button
-                    type="button"
-                    className="btn btn-primary"
-                   
-                >
-                    Launch demo modal
-                </button> */}
-
                 <div
-                // className="modal fade show"
-                id={`modal${content.id}`}
-                tabIndex={-1}
-                role="dialog"
-                aria-labelledby="modelTitleId"
-                aria-hidden="true"
+                    style={{
+                        background: "rgba(0,0,0,0.8)",
+                        width: "calc(100vw)",
+                        height: "calc(100vw)",
+                        position: "fixed",
+                        top: 0,
+                        left: 0,
+                    }}
                 >
-                    <div className="modal-dialog" role="document">
-                        <div
-                            className="modal-content"
-                            style={{ maxWidth: 800, width: 800 }}
-                        >
-                            <div className="modal-header">
-                                <h4 className="modal-title" style={{textAlign: "center"}}>
+                    <div
+                        style={{
+                            position: "absolute",
+                            top: 50,
+                            left: 100,
+                            right: 100,
+                        }}
+                    >
+                        <div className="modal-content">
+                            <div
+                                className="mheader"
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "space-around",
+                                }}
+                            >
+                                <h4
+                                    className="title"
+                                    style={{
+                                        textAlign: "center",
+                                        color: "white",
+                                    }}
+                                >
                                     Thông tin sản phẩm
                                 </h4>
-                                <button
-                                    type="button"
-                                    className="close"
-                                    data-dismiss="modal"
-                                    aria-label="Close"
-                                >
-                                    <span aria-hidden="true">×</span>
-                                </button>
                             </div>
-                            <div className="modal-body">
+                            <div className="mbody mt-4">
                                 <div className="row">
                                     <div className="col-4">
                                         <img
@@ -49,11 +51,18 @@ export default class Modal extends Component {
                                         />
                                     </div>
                                     <div className="col-8">
-                                    
-                                        <table className="table" style={{fontSize: 13}}>
+                                        <table
+                                            className="table"
+                                            style={{
+                                                fontSize: 13,
+                                                borderRadius: 50,
+                                            }}
+                                        >
                                             <tbody>
                                                 <tr>
-                                                    <td style={{width: 100}}>Tên sản phẩm</td>
+                                                    <td style={{ width: 100 }}>
+                                                        Tên sản phẩm
+                                                    </td>
                                                     <td>{content.name}</td>
                                                 </tr>
                                                 <tr>
@@ -64,7 +73,7 @@ export default class Modal extends Component {
                                                 </tr>
                                                 <tr>
                                                     <td>Giá</td>
-                                                    <td>{content.price}</td>
+                                                    <td>{content.price}$</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Số lượng</td>
@@ -75,22 +84,19 @@ export default class Modal extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="modal-footer">
+                            <div
+                                className="mfooter"
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "space-around",
+                                }}
+                            >
                                 <button
                                     type="button"
-                                    className="btn btn-secondary"
-                                    data-dismiss="modal"
-                                    
-                                 
-                                
+                                    className="btn btn-success"
+                                    onClick={onModal("")}
                                 >
                                     Close
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-primary"
-                                >
-                                    Save
                                 </button>
                             </div>
                         </div>
